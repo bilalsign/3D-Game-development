@@ -1,0 +1,20 @@
+public class Respwan : MonoBehaviour
+{
+    [SerializeField] GameObject player;
+    [SerializeField] Transform spwanPoint;
+    [SerializeField] float spwanValue;
+
+    void Update()
+    {
+        if (player.transform.position.y < - spwanValue)
+        {
+            RespwanPoint();
+        }
+
+    }
+
+    void RespwanPoint()
+    {
+        transform.position = spwanPoint.position;
+    }
+}
